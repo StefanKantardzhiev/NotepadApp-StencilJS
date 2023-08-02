@@ -10,11 +10,15 @@ export namespace Components {
     }
     interface AppTabs {
     }
+    interface LoginComponent {
+    }
     interface PageHome {
     }
     interface PageNotes {
+        "name": string;
     }
     interface PageProfile {
+        "age": string;
         "name": string;
     }
 }
@@ -30,6 +34,12 @@ declare global {
     var HTMLAppTabsElement: {
         prototype: HTMLAppTabsElement;
         new (): HTMLAppTabsElement;
+    };
+    interface HTMLLoginComponentElement extends Components.LoginComponent, HTMLStencilElement {
+    }
+    var HTMLLoginComponentElement: {
+        prototype: HTMLLoginComponentElement;
+        new (): HTMLLoginComponentElement;
     };
     interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
     }
@@ -52,6 +62,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "app-tabs": HTMLAppTabsElement;
+        "login-component": HTMLLoginComponentElement;
         "page-home": HTMLPageHomeElement;
         "page-notes": HTMLPageNotesElement;
         "page-profile": HTMLPageProfileElement;
@@ -62,16 +73,21 @@ declare namespace LocalJSX {
     }
     interface AppTabs {
     }
+    interface LoginComponent {
+    }
     interface PageHome {
     }
     interface PageNotes {
+        "name"?: string;
     }
     interface PageProfile {
+        "age"?: string;
         "name"?: string;
     }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "app-tabs": AppTabs;
+        "login-component": LoginComponent;
         "page-home": PageHome;
         "page-notes": PageNotes;
         "page-profile": PageProfile;
@@ -83,6 +99,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "app-tabs": LocalJSX.AppTabs & JSXBase.HTMLAttributes<HTMLAppTabsElement>;
+            "login-component": LocalJSX.LoginComponent & JSXBase.HTMLAttributes<HTMLLoginComponentElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-notes": LocalJSX.PageNotes & JSXBase.HTMLAttributes<HTMLPageNotesElement>;
             "page-profile": LocalJSX.PageProfile & JSXBase.HTMLAttributes<HTMLPageProfileElement>;

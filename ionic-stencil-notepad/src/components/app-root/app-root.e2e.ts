@@ -1,5 +1,6 @@
 import { newE2EPage } from '@stencil/core/testing'
 
+
 describe('app-root', () => {
   it('renders', async () => {
     const page = await newE2EPage({ url: '/' })
@@ -14,4 +15,5 @@ describe('app-root', () => {
     const element = await page.find('app-root ion-title')
     expect(element.textContent).toEqual('Home')
   })
+
 })

@@ -1,4 +1,4 @@
-import { Component, Fragment, h, State } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 
 @Component({
   tag: 'page-home',
@@ -33,24 +33,43 @@ export class PageHome {
 
   render() {
     return (
-      <ion-content>
-        <Fragment>
+      <ion-content color={'dark'}>
+        <ion-header>
+          <ion-toolbar color="dark">
+            <ion-title>5Based</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-menu contentId="main-content">
           <ion-header>
-            <ion-toolbar color="primary">
-              <ion-title>Notes</ion-title>
+            <ion-toolbar>
+              <ion-title>5based</ion-title>
             </ion-toolbar>
           </ion-header>
-
           <ion-content class="ion-padding">
+            <ion-nav-link router-direction="forward" component="login-component">
+              <ion-button color={'dark'}>
+                {' '}
+                <ion-route url="/login" component="login-component"></ion-route>Login
+              </ion-button>
+            </ion-nav-link>
+
+            <ion-nav-link router-direction="forward" component="register">
+              <ion-button color={'primary'}>Register</ion-button>
+            </ion-nav-link>
+          </ion-content>
+        </ion-menu>
+
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+        {/* <ion-content class="ion-padding">
             <ion-list>
-              {this.names.map(user => (
-                <ion-item href={'/profile/' + user.name.toLowerCase()} key={(user.name)}>
+              {/* {this.names.map(user => ( */}
+        {/* <ion-item href={'/profile/' + user.name.toLowerCase()} key={user.name}>
                   <ion-label>{user.name} is following you!</ion-label>
                 </ion-item>
-              ))}
-            </ion-list>
-          </ion-content>
-        </Fragment>
+              ))} */}
+        {/* </ion-list>
+          </ion-content> */}
       </ion-content>
     );
   }
