@@ -6,11 +6,15 @@ import { Component, Fragment, h, Prop } from '@stencil/core';
   // shadow: true,
 })
 export class PageProfile {
-  @Prop() name: string
+  @Prop()
+  name: string;
+  age: Number;
+  city: string;
 
   normalize(name: string): string {
-    name = name || ''
+    name = name || '';
     return name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase();
+    
   }
 
   render() {
@@ -19,7 +23,7 @@ export class PageProfile {
         <ion-header>
           <ion-toolbar color="primary">
             <ion-buttons slot="start">
-              <ion-back-button defaultHref="/tab/notice"></ion-back-button>
+              <ion-back-button defaultHref="/tab/notes"></ion-back-button>
             </ion-buttons>
             <ion-title>Profile: {this.name}</ion-title>
           </ion-toolbar>
@@ -27,19 +31,14 @@ export class PageProfile {
         <ion-content fullscreen class="ion-padding">
           <ion-card>
             <ion-card-header>
-              <h1>
-                {this.normalize(this.name)}
-              </h1>
+              <h1>{this.normalize(this.name)}</h1>
             </ion-card-header>
             <ion-card-content>
-              <p>
-                This name is passed in through a route param!
-              </p>
+              <p>City:{this.age}</p>
             </ion-card-content>
           </ion-card>
         </ion-content>
       </Fragment>
     );
   }
-
 }
