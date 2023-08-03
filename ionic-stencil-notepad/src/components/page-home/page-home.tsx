@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 
 @Component({
   tag: 'page-home',
@@ -62,12 +62,9 @@ export class PageHome {
         </ion-header>
 
         {this.girls.map(user => (
-          <ion-card class="discover-card" href={'/profile/' + user.name.toLowerCase()} key={(user.name)}>
+          <ion-card class="discover-card" href={'/profile/' + user.name.toLowerCase()} key={user.name}>
             <ion-avatar>
-              <img
-                alt="girl-pic"
-                src={user.img}
-              />
+              <img alt="girl-pic" src={user.img} />
             </ion-avatar>
             <ion-card-header>
               <ion-card-title>{user.name}</ion-card-title>

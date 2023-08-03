@@ -1,4 +1,4 @@
-import { Component, Fragment, h, Prop, State } from '@stencil/core';
+import { Component, Fragment, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'page-profile',
