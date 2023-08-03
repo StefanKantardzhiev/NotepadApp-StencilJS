@@ -60,28 +60,9 @@ export class PageHome {
             <ion-title>5Based</ion-title>
           </ion-toolbar>
         </ion-header>
-        {/* 
-        <ion-side-pane>
-          <ion-menu contentId="main-content" auto-hide="true">
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>5based</ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content class="ion-padding">
-              <ion-nav-link router-direction="forward" component="login-component">
-                <ion-button color={'dark'}>Login</ion-button>
-              </ion-nav-link>
 
-              <ion-nav-link router-direction="forward" component="register-component">
-                <ion-button color={'primary'}>Register</ion-button>
-              </ion-nav-link>
-            </ion-content>
-          </ion-menu>
-        </ion-side-pane> */}
-        =
         {this.girls.map(user => (
-          <ion-card class="home-girls">
+          <ion-card class="discover-card" href={'/profile/' + user.name.toLowerCase()} key={user.name}>
             <ion-avatar>
               <img
                 alt="Silhouette of mountains"
@@ -96,9 +77,6 @@ export class PageHome {
             <ion-card-content>Here's a small text description for the card content. Nothing more, nothing less.</ion-card-content>
           </ion-card>
         ))}
-        {/* <ion-router-outlet id="main-content">
-          <ion-content></ion-content>
-        </ion-router-outlet> */}
       </ion-content>
     );
   }

@@ -7,18 +7,21 @@ import { Component, h } from '@stencil/core';
 export class DiscoverComponent {
   girls = [
     {
+      id: 1,
       name: 'Jeanie',
       age: '30',
       city: 'Burgas',
       img: `https://media.glamour.com/photos/60ec8c044b69168174d4d344/master/w_2560%2Cc_limit/118199090_660701904827587_4866693903082711670_n.jpg`,
     },
     {
+      id: 2,
       name: 'Sonya',
       age: '30',
       city: 'Varna',
       img: `https://media.glamour.com/photos/60ec8c044b69168174d4d344/master/w_2560%2Cc_limit/118199090_660701904827587_4866693903082711670_n.jpg`,
     },
     {
+      id: 3,
       name: 'Ginka',
       age: '30',
       city: 'Burgas',
