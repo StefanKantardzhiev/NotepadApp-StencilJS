@@ -22,7 +22,6 @@ export namespace Components {
         "name": string;
     }
     interface PageProfile {
-        "age": string;
         "name": string;
     }
     interface RegisterComponent {
@@ -112,7 +111,6 @@ declare namespace LocalJSX {
         "name"?: string;
     }
     interface PageProfile {
-        "age"?: string;
         "name"?: string;
     }
     interface RegisterComponent {

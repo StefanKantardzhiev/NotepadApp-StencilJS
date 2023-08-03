@@ -13,7 +13,7 @@ export class PageNotes {
     return name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase();
   }
   names = [
-    { name: 'Alice', age: '30', city: 'Burgas' },
+    { name: 'Alice', age: '30', city: 'Burgas', img: 'https://img6.arthub.ai/64a935f0-92be.webp' },
     { name: 'Stefan', age: '32', city: 'Varna' },
     { name: 'Peter', age: '22', city: 'Essen' },
   ];

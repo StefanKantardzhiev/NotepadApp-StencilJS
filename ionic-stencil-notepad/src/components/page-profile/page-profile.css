@@ -1,0 +1,18 @@
+.profile-card {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+ion-avatar {
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+p {
+    font-size: 30px;
+}
