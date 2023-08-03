@@ -1,12 +1,10 @@
 .home-girls {
-    display: inline-block;
-    justify-content: center;
+    display: block;
     text-align: center;
 }
 
 .home-girls ion-avatar {
     display: block;
-    margin: auto;
     width: 100px;
     height: 100px;
     text-align: center;

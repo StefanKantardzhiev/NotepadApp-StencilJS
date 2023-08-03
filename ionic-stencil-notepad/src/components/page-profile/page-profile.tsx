@@ -31,7 +31,26 @@ export class PageProfile {
       city: 'Burgas',
       img: `https://img6.arthub.ai/64cb7ffc-33ab.webp`,
     },
+    {
+      name: 'Jane',
+      age: '30',
+      city: 'Tokyo',
+      img: `https://img6.arthub.ai/64c92ca7-a482.webp`,
+    },
+    {
+      name: 'Elene',
+      age: '30',
+      city: 'Berlin',
+      img: `https://img6.arthub.ai/64ca4ecb-94c7.webp`,
+    },
+    {
+      name: 'Heidi',
+      age: '20',
+      city: 'Dortmund',
+      img: `https://img6.arthub.ai/64cb4b8e-3007.webp`,
+    },
   ];
+
   currentUser = this.users.find(user => user.name === this.normalize(this.name));
 
   normalize(name: string): string {

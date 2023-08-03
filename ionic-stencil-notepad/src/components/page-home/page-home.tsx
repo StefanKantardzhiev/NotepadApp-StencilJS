@@ -54,26 +54,31 @@ export class PageHome {
 
   render() {
     return (
-      <ion-content color={'dark'}>
+      <ion-content class={'home-content'} color={'dark'}>
         <ion-header>
           <ion-toolbar color="dark">
             <ion-title>5Based</ion-title>
           </ion-toolbar>
         </ion-header>
+        <ion-grid>
+          <ion-row>
+            {this.girls.map(user => (
+              <ion-col class={'home-column'}>
+                <ion-card class="discover-card" href={'/profile/' + user.name.toLowerCase()} key={user.name}>
+                  <ion-avatar>
+                    <img alt="girl-pic" src={user.img} />
+                  </ion-avatar>
+                  <ion-card-header>
+                    <ion-card-title>{user.name}</ion-card-title>
+                    <ion-card-subtitle>{user.age}</ion-card-subtitle>
+                  </ion-card-header>
 
-        {this.girls.map(user => (
-          <ion-card class="discover-card" href={'/profile/' + user.name.toLowerCase()} key={user.name}>
-            <ion-avatar>
-              <img alt="girl-pic" src={user.img} />
-            </ion-avatar>
-            <ion-card-header>
-              <ion-card-title>{user.name}</ion-card-title>
-              <ion-card-subtitle>{user.age}</ion-card-subtitle>
-            </ion-card-header>
-
-            <ion-card-content>Here's a small text description for the card content. Nothing more, nothing less.</ion-card-content>
-          </ion-card>
-        ))}
+                  <ion-card-content>Here's a small text description for the card content. Nothing more, nothing less.</ion-card-content>
+                </ion-card>
+              </ion-col>
+            ))}
+          </ion-row>
+        </ion-grid>
       </ion-content>
     );
   }
