@@ -1,6 +1,6 @@
 :host {
   display: block;
-  max-width: 1000px;
+  max-width: 10px;
   margin: 0 auto;
   padding: 20px;
   border: inset 1px solid #ccc;
@@ -12,8 +12,8 @@
 
 ion-card {
   display: flex;
-  width: 50%;
-  margin: 20vh auto;
+  width: 80%;
+  margin: 30% auto;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -24,7 +24,7 @@ ion-card-header {
   text-align: center;
 }
 
-.login-title {
+.register-title {
   display: block;
   text-shadow: 1px 1px 3px grey;
   width: 100%;
@@ -39,9 +39,7 @@ ion-input {
   font-size: 18px;
 }
 
-
-ion-button {
-  width: 60%;
+/* .button {
   display: block;
   margin: 20px auto;
   background-color: #222428;
@@ -50,4 +48,18 @@ ion-button {
   border-radius: 1rem;
   text-shadow: 1px 1px 3px black;
   font-weight: 700;
+  font-size: large;
+} */
+
+.error {
+  margin: auto;
+  color: rgba(251, 253, 255, 0.786);
+  display: block;
+  text-align: center;
+  background-color: #222428;
+  padding: 1px 30px;
+  border-radius: 1rem;
+  text-shadow: 1px 1px 3px black;
+  font-weight: 700;
+  font-size: 7px;
 }

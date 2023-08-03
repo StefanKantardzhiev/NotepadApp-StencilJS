@@ -19,7 +19,7 @@ export class PageProfile {
   render() {
     return (
       <Fragment >
-        <ion-header >
+        <ion-header>
           <ion-toolbar color="dark">
             <ion-buttons slot="start" color="dark">
               <ion-back-button defaultHref="/tab/notes"></ion-back-button>

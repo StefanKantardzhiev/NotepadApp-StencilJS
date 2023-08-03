@@ -25,7 +25,7 @@ export class LoginComponent {
   render() {
     return (
       <ion-card>
-        <ion-card-header class="ion-text-center">
+        <ion-card-header>
           <ion-card-title>
             <h3 class="login-title">Login Page</h3>
           </ion-card-title>
@@ -37,11 +37,10 @@ export class LoginComponent {
           <ion-item>
             <ion-input label="Password" type="password" placeholder="Password" value={this.password} onInput={event => this.handlePasswordChange(event)} />
           </ion-item>
+          <ion-button color="dark" onClick={() => this.handleLoginClick()}>
+            Login
+          </ion-button>
         </ion-list>
-        <ion-button>Custom Button</ion-button>
-        <button class="button" onClick={() => this.handleLoginClick()}>
-          Login
-        </button>
       </ion-card>
     );
   }

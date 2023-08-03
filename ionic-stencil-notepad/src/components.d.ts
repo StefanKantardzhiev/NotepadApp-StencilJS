@@ -10,7 +10,11 @@ export namespace Components {
     }
     interface AppTabs {
     }
+    interface DiscoverComponent {
+    }
     interface LoginComponent {
+    }
+    interface MessagesComponent {
     }
     interface PageHome {
     }
@@ -20,6 +24,8 @@ export namespace Components {
     interface PageProfile {
         "age": string;
         "name": string;
+    }
+    interface RegisterComponent {
     }
 }
 declare global {
@@ -35,11 +41,23 @@ declare global {
         prototype: HTMLAppTabsElement;
         new (): HTMLAppTabsElement;
     };
+    interface HTMLDiscoverComponentElement extends Components.DiscoverComponent, HTMLStencilElement {
+    }
+    var HTMLDiscoverComponentElement: {
+        prototype: HTMLDiscoverComponentElement;
+        new (): HTMLDiscoverComponentElement;
+    };
     interface HTMLLoginComponentElement extends Components.LoginComponent, HTMLStencilElement {
     }
     var HTMLLoginComponentElement: {
         prototype: HTMLLoginComponentElement;
         new (): HTMLLoginComponentElement;
+    };
+    interface HTMLMessagesComponentElement extends Components.MessagesComponent, HTMLStencilElement {
+    }
+    var HTMLMessagesComponentElement: {
+        prototype: HTMLMessagesComponentElement;
+        new (): HTMLMessagesComponentElement;
     };
     interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
     }
@@ -59,13 +77,22 @@ declare global {
         prototype: HTMLPageProfileElement;
         new (): HTMLPageProfileElement;
     };
+    interface HTMLRegisterComponentElement extends Components.RegisterComponent, HTMLStencilElement {
+    }
+    var HTMLRegisterComponentElement: {
+        prototype: HTMLRegisterComponentElement;
+        new (): HTMLRegisterComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "app-tabs": HTMLAppTabsElement;
+        "discover-component": HTMLDiscoverComponentElement;
         "login-component": HTMLLoginComponentElement;
+        "messages-component": HTMLMessagesComponentElement;
         "page-home": HTMLPageHomeElement;
         "page-notes": HTMLPageNotesElement;
         "page-profile": HTMLPageProfileElement;
+        "register-component": HTMLRegisterComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -73,7 +100,11 @@ declare namespace LocalJSX {
     }
     interface AppTabs {
     }
+    interface DiscoverComponent {
+    }
     interface LoginComponent {
+    }
+    interface MessagesComponent {
     }
     interface PageHome {
     }
@@ -84,13 +115,18 @@ declare namespace LocalJSX {
         "age"?: string;
         "name"?: string;
     }
+    interface RegisterComponent {
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "app-tabs": AppTabs;
+        "discover-component": DiscoverComponent;
         "login-component": LoginComponent;
+        "messages-component": MessagesComponent;
         "page-home": PageHome;
         "page-notes": PageNotes;
         "page-profile": PageProfile;
+        "register-component": RegisterComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -99,10 +135,13 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "app-tabs": LocalJSX.AppTabs & JSXBase.HTMLAttributes<HTMLAppTabsElement>;
+            "discover-component": LocalJSX.DiscoverComponent & JSXBase.HTMLAttributes<HTMLDiscoverComponentElement>;
             "login-component": LocalJSX.LoginComponent & JSXBase.HTMLAttributes<HTMLLoginComponentElement>;
+            "messages-component": LocalJSX.MessagesComponent & JSXBase.HTMLAttributes<HTMLMessagesComponentElement>;
             "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
             "page-notes": LocalJSX.PageNotes & JSXBase.HTMLAttributes<HTMLPageNotesElement>;
             "page-profile": LocalJSX.PageProfile & JSXBase.HTMLAttributes<HTMLPageProfileElement>;
+            "register-component": LocalJSX.RegisterComponent & JSXBase.HTMLAttributes<HTMLRegisterComponentElement>;
         }
     }
 }
